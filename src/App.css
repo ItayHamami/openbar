@@ -1,0 +1,56 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+
+
+.color-primary{
+color:#008080;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.color-secondary{
+color:#FF1493;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.color-text{
+  color:#333333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero{
+background: url("../public/bg.jpg");
+background-repeat: no-repeat;
+background-position: center;
+background-size:100vh;
+object-fit: cover;
+background-attachment: fixed;
+
+
+}
+
+.App{
+  background-color: rgb(205, 205, 193);
+}
+/* other options : 
+Option 2: 
+Primary Color: #4B0082 (Indigo)
+Secondary Color: #FF6347 (Tomato)
+Text Color: #666666 (Gray)
+
+Option 3: Vibrant and Playful
+Primary Color: #FFA500 (Orange)
+Secondary Color: #8A2BE2 (BlueViolet)
+Text Color: #444444 (Dark Slate Gray)
+
+Option 4: Warm and Inviting
+Primary Color: #FF7F50 (Coral)
+Secondary Color: #4682B4 (SteelBlue)
+Text Color: #555555 (Dim Gray)
+
+Option 5: Minimalistic and Clean
+Primary Color: #008080 (Teal)
+Secondary Color: #FF1493 (DeepPink)
+Text Color: #333333 (Dark Slate Gray)
+*/
