@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { getAllIngredients } from '../utils/apiService';
 
 const IngredientsForm = ({ onIngredientsSubmit }) => {
-  const [ingredients, setIngredients] = useState([]);
+  const [ingredients, setIngredients] = useState([]); // Keep all ingredients
   const [filteredIngredients, setFilteredIngredients] = useState([]);
   const [selectedIngredients, setSelectedIngredients] = useState([]);
   const [isListVisible, setIsListVisible] = useState(false); // Toggle state for ingredient list visibility
@@ -11,7 +11,7 @@ const IngredientsForm = ({ onIngredientsSubmit }) => {
     const fetchIngredients = async () => {
       try {
         const ingredientList = await getAllIngredients();
-        setIngredients(ingredientList);
+        setIngredients(ingredientList); // Set all ingredients here
         const alcoholicIngredients = ingredientList.filter(ingredient => isAlcoholic(ingredient));
         setFilteredIngredients(alcoholicIngredients);
       } catch (error) {
@@ -77,16 +77,11 @@ const IngredientsForm = ({ onIngredientsSubmit }) => {
               </div>
             </div>
           ))}
-
-<button className="btn btn-primary rounded-pill mt-3" onClick={handleSubmit}>
-        Find Cocktails
-      </button>
-
+          <button className="btn btn-primary rounded-pill mt-3" onClick={handleSubmit}>
+            Find Cocktails
+          </button>
         </div>
-        
       )}
-
-
     </div>
   );
 };
