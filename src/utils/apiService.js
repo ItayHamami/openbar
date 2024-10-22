@@ -49,8 +49,9 @@ export function getCocktailById(cocktailId) {
   });
 }
 
-// Utility function to handle errors (if needed in the future)
+/* Utility function to handle errors (if needed in the future)
 function handleApiError(error) {
   console.error('API Error:', error.response?.data || error.message);
   return Promise.reject(error);
 }
+*/

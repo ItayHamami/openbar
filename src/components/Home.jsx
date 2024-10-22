@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { randomCocktails, searchByName, getAllIngredients, searchByIngredient } from '../utils/apiService';
+import { randomCocktails, searchByName, searchByIngredient } from '../utils/apiService';
 import LoadingSign from './LoadingSign';
 import { errorMsg } from '../utils/feedbackService';
 import CocktailModal from './CocktailModal';
