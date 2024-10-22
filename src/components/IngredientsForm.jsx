@@ -2,16 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { getAllIngredients } from '../utils/apiService';
 
 const IngredientsForm = ({ onIngredientsSubmit }) => {
-  const [ingredients, setIngredients] = useState([]); // Keep all ingredients
   const [filteredIngredients, setFilteredIngredients] = useState([]);
   const [selectedIngredients, setSelectedIngredients] = useState([]);
-  const [isListVisible, setIsListVisible] = useState(false); // Toggle state for ingredient list visibility
+  const [isListVisible, setIsListVisible] = useState(false); 
 
   useEffect(() => {
     const fetchIngredients = async () => {
       try {
         const ingredientList = await getAllIngredients();
-        setIngredients(ingredientList); // Set all ingredients here
         const alcoholicIngredients = ingredientList.filter(ingredient => isAlcoholic(ingredient));
         setFilteredIngredients(alcoholicIngredients);
       } catch (error) {
